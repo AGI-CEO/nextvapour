@@ -1,4 +1,6 @@
 import Navbar from "./Navbar";
+import Image from "next/image";
+
 const Header = () => {
   const playMarioWarCry = () => {
     const audio = new Audio("/public/assets/MarioYahoo.mp3");
@@ -23,6 +25,8 @@ const Header = () => {
         alt="logo"
         className="w-80 mx-auto drop-shadow"
         style={{ marginBottom: "-18px" }}
+        width={500}
+        height={300}
       />
       <div
         id="storeLinks"
@@ -37,12 +41,16 @@ const Header = () => {
             alt="announcement"
             className="sm:w-10 w-8 bg-blue-200 p-2 rounded shadow-lg cursor-pointer"
             onClick={playMarioWarCry}
+            width={40}
+            height={40}
           />
           <Image
             className="sm:w-10 w-8 bg-green-200 p-2 rounded shadow-lg cursor-pointer"
             src="/assets/icons/notification.png"
             alt="notification"
             onClick={playMarioMushroom}
+            width={40}
+            height={40}
           />
           <div className="flex items-center gap-1">
             <Image
@@ -50,6 +58,8 @@ const Header = () => {
               src="/public/assets/icons/user.png"
               alt="user"
               onClick={playMarioDeath}
+              width={40}
+              height={40}
             />
           </div>
         </div>

@@ -9,6 +9,7 @@ import Library from "./Library";
 import Wishlist from "./Wishlist";
 import Footer from "./Footer";
 import Upcoming from "./Upcoming";
+import Link from "next/link";
 const WishContext = createContext();
 export { WishContext };
 const GameContext = createContext();
@@ -18,7 +19,7 @@ export default function App() {
   const [gameInfo, setGameInfo] = useState({});
   const [showInfo, setShowInfo] = useState(false);
   const [wishlist, setWishlist] = useState([]);
-  const router = useRouter();
+  //const router = useRouter();
 
   const getGameDetails = async (id) => {
     try {
@@ -52,10 +53,10 @@ export default function App() {
       <WishContext.Provider value={{ wishlist, setWishlist }}>
         <Header />
         <GameContext.Provider value={getGameDetails}>
-          {router.pathname === "/" && <FrontPage />}
-          {router.pathname === "/upcoming" && <Upcoming />}
-          {router.pathname === "/library" && <Library />}
-          {router.pathname === "/wishlist" && <Wishlist />}
+          <Link href="/">FrontPage</Link>
+          <Link href="/upcoming">Upcoming</Link>
+          <Link href="/library">Library</Link>
+          <Link href="/wishlist">Wishlist</Link>
         </GameContext.Provider>
       </WishContext.Provider>
       {showInfo && (

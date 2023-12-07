@@ -4,33 +4,36 @@ import { useRouter } from "next/router";
 import { WishContext } from "./page";
 
 const Navbar = () => {
-  const router = useRouter();
+  //const router = useRouter();
   const [activeLink, setActiveLink] = useState("");
   const { wishlist } = useContext(WishContext);
 
-  useEffect(() => {
+  /*useEffect(() => {
     setActiveLink(router.pathname);
-  }, [router.pathname]);
+  }, [router.pathname]);*/
 
   return (
     <>
-      <Link href={"/"}>
-        <a className={activeLink === "/" ? "underline" : undefined}>Home</a>
+      <Link href={"/"} className={activeLink === "/" ? "underline" : undefined}>
+        Home
       </Link>
-      <Link href={"/library"}>
-        <a className={activeLink === "/library" ? "underline" : undefined}>
-          Library
-        </a>
+      <Link
+        href={"/library"}
+        className={activeLink === "/library" ? "underline" : undefined}
+      >
+        Library
       </Link>
-      <Link href={"/upcoming"}>
-        <a className={activeLink === "/upcoming" ? "underline" : undefined}>
-          Upcoming
-        </a>
+      <Link
+        href={"/upcoming"}
+        className={activeLink === "/upcoming" ? "underline" : undefined}
+      >
+        Upcoming
       </Link>
-      <Link href={"/wishlist"}>
-        <a className={activeLink === "/wishlist" ? "underline" : undefined}>
-          {wishlist.length !== 0 ? `Wishlist (${wishlist.length})` : `Wishlist`}
-        </a>
+      <Link
+        href={"/wishlist"}
+        className={activeLink === "/wishlist" ? "underline" : undefined}
+      >
+        {wishlist.length !== 0 ? `Wishlist (${wishlist.length})` : `Wishlist`}
       </Link>
     </>
   );
