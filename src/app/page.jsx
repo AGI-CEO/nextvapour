@@ -1,24 +1,19 @@
 "use client";
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import Header from "./Header";
-import FrontPage from "./FrontPage";
 import GameInfo from "./GameInfo";
-import Library from "./Library";
-import Wishlist from "./Wishlist";
 import Footer from "./Footer";
-import Upcoming from "./Upcoming";
 import Link from "next/link";
-const WishContext = createContext();
-export { WishContext };
-const GameContext = createContext();
-export { GameContext };
+import GameCarousel from "./GameCarousel";
+import Library from "./Library";
+//import { WishContext, GameContext } from "./_app";
 
 export default function App() {
   const [gameInfo, setGameInfo] = useState({});
   const [showInfo, setShowInfo] = useState(false);
-  const [wishlist, setWishlist] = useState([]);
+  //const { wishlist, setWishlist } = useContext(WishContext);
   //const router = useRouter();
 
   const getGameDetails = async (id) => {
@@ -50,15 +45,10 @@ export default function App() {
 
   return (
     <div className="min-h-[100dvh]">
-      <WishContext.Provider value={{ wishlist, setWishlist }}>
-        <Header />
-        <GameContext.Provider value={getGameDetails}>
-          <Link href="/">FrontPage</Link>
-          <Link href="/upcoming">Upcoming</Link>
-          <Link href="/library">Library</Link>
-          <Link href="/wishlist">Wishlist</Link>
-        </GameContext.Provider>
-      </WishContext.Provider>
+      <Header />
+
+      <GameCarousel />
+      <Library />
       {showInfo && (
         <GameInfo gameInfo={gameInfo} handleCloseButton={handleCloseButton} />
       )}

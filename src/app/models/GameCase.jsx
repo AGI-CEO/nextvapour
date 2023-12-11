@@ -50,7 +50,7 @@ export function GameCase({ back, spine, cover, zPos, ...props }) {
     videoMaterial.current.needsUpdate = true;
   }, [cover, spine, back]);
 
-  const meshRef = React.useRef();
+  const meshRef = useRef();
 
   useFrame(({ clock }) => {
     if (meshRef.current) {

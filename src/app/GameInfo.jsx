@@ -6,7 +6,7 @@ const GameInfo = ({
   handleCloseButton,
 }) => {
   return (
-    <div className="text-white text-white fixed top-1/4 left-1/2 transform -translate-x-1/2 z-50 bg-slate-800 p-5 rounded shadow-[0_0_10px_black]">
+    <div className="text-white fixed top-1/4 left-1/2 transform -translate-x-1/2 z-50 bg-slate-800 p-5 rounded shadow-[0_0_10px_black]">
       <div className="absolute right-0 top-0 cursor-pointer">
         <svg
           width="50px"

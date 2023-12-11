@@ -2,8 +2,9 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 //import { WishContext, GameContext } from "../_app";
+import Header from "../Header";
 
-export default function Library() {
+export default function page() {
   const [library, setLibrary] = useState([]);
   //const getGameDetails = useContext(GameContext);
   //const { wishlist, setWishlist } = useContext(WishContext); // Access wishlist and setWishlist
@@ -23,6 +24,7 @@ export default function Library() {
 
   return (
     <>
+      <Header />
       <div className="relative">
         <div
           id="gallery"

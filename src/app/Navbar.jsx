@@ -1,12 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { WishContext } from "./page";
+import { WishContext } from "./_app";
 
 const Navbar = () => {
   //const router = useRouter();
   const [activeLink, setActiveLink] = useState("");
-  const { wishlist } = useContext(WishContext);
+  //const { wishlist } = useContext(WishContext);
 
   /*useEffect(() => {
     setActiveLink(router.pathname);
@@ -33,7 +33,7 @@ const Navbar = () => {
         href={"/wishlist"}
         className={activeLink === "/wishlist" ? "underline" : undefined}
       >
-        {wishlist.length !== 0 ? `Wishlist (${wishlist.length})` : `Wishlist`}
+        {/*wishlist.length !== 0 ? `Wishlist (${wishlist.length})` : `Wishlist`*/}
       </Link>
     </>
   );
