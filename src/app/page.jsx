@@ -47,7 +47,7 @@ export default function App() {
     <div className="min-h-[100dvh]">
       <Header />
 
-      {/*<GameCarousel />*/}
+      <GameCarousel />
       <Library />
       {showInfo && (
         <GameInfo gameInfo={gameInfo} handleCloseButton={handleCloseButton} />
