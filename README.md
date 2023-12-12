@@ -2,7 +2,7 @@
 
 # Next.js vs PERN
 
-## System Design Capstone Engineering Report and Analysis
+## System Design Engineering Report and Analysis
 
 ## By Blaise Pascual
 
