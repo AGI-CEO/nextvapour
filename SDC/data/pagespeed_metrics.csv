@@ -1,0 +1,4 @@
+Environment,Performance Score,Accessibility Score,Best Practices Score,SEO Score,First Contentful Paint (s),Total Blocking Time (ms),Largest Contentful Paint (s),Cumulative Layout Shift
+"Bun, No Three.js, Vercel",48,94,95,No Data,1.0,150,99.8,1.321
+"Bun, Three.js, Vercel",13,89,95,100,1.2,108670,89.8,0.585
+"Node, No Three.js, Render",49,100,100,92,1.5,10,35.6,0.805
