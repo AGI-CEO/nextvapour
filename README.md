@@ -6,15 +6,15 @@
 
 ## By Blaise Pascual
 
- </div>
-
 This report is a markdown render of the [Jupyter Notebook](./SDC/SDCEngineerJournal.ipynb).
+
+ </div>
 
 # I. Introduction
 
 ## Purpose of the Report
 
-This report documents the process of rewriting a React, Express, Node application to utilize Next.js with Server-Side Rendering (SSR). The primary focus is to analyze the impact of SSR on page speed, a critical metric for user experience and SEO performance.
+This report documents the process of rewriting a React, Express, Node application ([Vapour](https://github.com/Group2-FEC/Vapour)) to utilize Next.js with Server-Side Rendering (SSR). The primary focus is to analyze the impact of SSR on page speed, a critical metric for user experience and SEO performance.
 
 ## Overview of the Rewriting Process
 
